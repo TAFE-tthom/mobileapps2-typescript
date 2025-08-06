@@ -6,7 +6,10 @@
  */
 export interface LinkedListIterable<T> {
 
-	getIterator(): LinkedListIterable<T>;
+	/**
+	 * Returns the linked list iterator
+	 */
+	getIterator(): LinkedListIterator<T>;
 	
 }
 
@@ -32,7 +35,7 @@ export class LinkedListIterator<T> {
 	/**
 	 * Should outline if the iterator has finished
 	 */
-	finished(): boolean {
+	hasNext(): boolean {
 
 		return true;
 	}
@@ -40,7 +43,7 @@ export class LinkedListIterator<T> {
 	/**
 	 * Gets the next object from the iterator
 	 */
-	getNext(): T | null {
+	next(): T | null {
 		return null;
 	}
 

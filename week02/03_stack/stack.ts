@@ -13,13 +13,15 @@ export class StackNode<T> {
 
 }
 
-
+/**
+ * Stack 
+ */
 export class Stack<T> {
 	
 	root: StackNode<T> | null = null;
 
 	/**
-	 * Creates a linkedlist
+	 * Creates a stack
 	 * Should initialise the root node of the linked list
 	 * and size
 	 */
@@ -29,10 +31,9 @@ export class Stack<T> {
 	}
 
 	/**
-	 * Gets the root of the linkedlist, 
-	 * this would be the starting
-	 * node
-	 * @return {QueueNode} root - 
+	 * Gets the root of the stack, 
+	 * this would be the starting node
+	 * @return {StackNode} root - 
 	 * 	Root of the linkedlist
 	 */
 	peek(): StackNode<T> | null {
@@ -41,27 +42,20 @@ export class Stack<T> {
 
 	
 	/**
-	 * Appends an object to the end of the linkedlist
-	 * @param {number} obj - 
-	 * 	Object to be inserted into the
-	 * 	linked list
-	 *
+	 * Adds an element to the stack, replaces the top of the stack
+	 * with the new one.
+	 * @param {T} obj - 
 	 */
 	push(obj: T) {
 		//TODO: Implement append logic
-		if(this.root == null) {
-			this.root = new StackNode<T>(obj);
-		}
 	}
 
 	/**
-	 * Removes an element from the queue front, returns it
-	 * @return {Object} obj - 
-	 * 	Object to be removed or null
+	 * Removes the top element from stack, returns it
+	 * @return {T} obj - Object to be removed or null
 	 *
 	 */
 	pop(): T | null {
-		//TODO: Implement remove logic
 		return null;
 	}
 

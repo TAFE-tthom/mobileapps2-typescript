@@ -6,6 +6,12 @@ export class LinkedList<T> implements LinkedListIterable<T> {
 
 
   getIterator(): LinkedListIterator<T> {
-    
+    return new LinkedListIterator(this);
   }
+
+
+	append(obj: T) {
+
+	}
+  
 }

@@ -29,7 +29,7 @@ test("stack push and retrieve(0)", () => {
 	expect(objRetrieved).toBe(1);
 })
 
-test("stack multiple-pushand retrieve(1)", () => {
+test("stack multiple-push and retrieve(1)", () => {
 	let list = new Stack<number>();
 	list.push(10);
 	list.push(20);
@@ -37,10 +37,10 @@ test("stack multiple-pushand retrieve(1)", () => {
 	expect(rootObj).toBeDefined();
 	list.pop();
 	let objRetrieved = list.pop();
-	expect(objRetrieved).toBe(20);
+	expect(objRetrieved).toBe(10);
 })
 
-test("stack multiple-pushand retrieve(3)", () => {
+test("stack multiple-push and retrieve(3)", () => {
 	let list = new Stack<number>();
 	list.push(10);
 	list.push(20);
@@ -53,7 +53,7 @@ test("stack multiple-pushand retrieve(3)", () => {
 	list.pop();
 	list.pop();
 	let objRetrieved = list.pop();
-	expect(objRetrieved).toBe(40);
+	expect(objRetrieved).toBe(20);
 })
 
 
@@ -64,7 +64,7 @@ test("stack pushonce and pop(0)", () => {
 	expect(obj).toBe(10);
 })
 
-test("stack multiple pushand pop(1)", () => {
+test("stack multiple push and pop(1)", () => {
 	let list = new Stack<number>();
 	list.push(10);
 	list.push(20);
@@ -75,15 +75,31 @@ test("stack multiple pushand pop(1)", () => {
 	expect(obj).toBe(50);
 })
 
-test("stack multiple pushand pop(3)", () => {
+test("stack multiple push and pop(3)", () => {
 	let list = new Stack<number>();
 	list.push(10);
 	list.push(20);
 	list.push(30);
 	list.push(40);
 	list.push(50);
+	list.pop();
+	list.pop();
 	let obj = list.pop();
-	expect(obj).toBe(50);
+	expect(obj).toBe(30);
+})
+
+test("stack check size() is 3", () => {
+	let list = new Stack<number>();
+	list.push(10);
+	list.push(20);
+	list.push(30);
+	list.push(40);
+	list.push(50);
+	list.pop();
+	list.pop();
+	let obj = list.pop();
+	expect(list.size()).toBe(2);
+	expect(obj).toBe(30);
 })
 
 
