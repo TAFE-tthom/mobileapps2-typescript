@@ -12,7 +12,7 @@ export class Zipper {
 	}
 
 	/**
-	 * Constructs a Zipper
+	 * Constructs a Zipper, if iters is empty, hasNext() should be false
 	 */
 	static with(iters: Array<any[]>): Zipper {
 		let zipper = new Zipper();

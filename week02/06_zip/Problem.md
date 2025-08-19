@@ -15,6 +15,8 @@ You will need to implement the following:
 
 There is a typical assumption where the iterators added would be the same length, however this is a poor assumption to make. In the event that one iterator is smaller than the other, when there is no element to emit, `null` should be in its place. 
 
+If no iterators are given, `hasNext()` should return `false`.
+
 ```ts
 let zipper = Zipper.with([[1, 2, 3, 4], ["One", "Two", "Three", "Four"]]);
 

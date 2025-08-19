@@ -9,7 +9,7 @@ test("constructing Zipper", () => {
 
 test("constructing using Zipper.with(), empty []", () => {
 	let zip = Zipper.with([]);
-	expect(zip).toBeNull();
+	expect(zip.hasNext()).toBe(false);
 })
 
 test("zip with two arrays, same size", () => {
@@ -18,12 +18,13 @@ test("zip with two arrays, same size", () => {
 		[1, 2, 3, 4],
 		["One", "Two", "Three", "Four"]
 	]);
-
-	expect(zip.hasNext()).toBe(false);
+	
+	expect(zip.hasNext()).toBe(true);
 	expect(zip.next()).toEqual([1, "One"]);
 	expect(zip.next()).toEqual([2, "Two"]);
 	expect(zip.next()).toEqual([3, "Three"]);
 	expect(zip.next()).toEqual([4, "Four"]);
+	expect(zip.hasNext()).toBe(false);
 	
 });
 
@@ -50,11 +51,12 @@ test("zip with two arrays, second is smaller", () => {
 		["One", "Two"]
 	]);
 
-	expect(zip.hasNext()).toBe(false);
+	expect(zip.hasNext()).toBe(true);
 	expect(zip.next()).toEqual([1, "One"]);
 	expect(zip.next()).toEqual([2, "Two"]);
 	expect(zip.next()).toEqual([3, null]);
 	expect(zip.next()).toEqual([4, null]);
+	expect(zip.hasNext()).toBe(false);
 	
 });
 
@@ -65,10 +67,11 @@ test("zip with two arrays, first is smaller", () => {
 		["One", "Two", "Three", "Four"]
 	]);
 
-	expect(zip.hasNext()).toBe(false);
+	expect(zip.hasNext()).toBe(true);
 	expect(zip.next()).toEqual([1, "One"]);
 	expect(zip.next()).toEqual([2, "Two"]);
 	expect(zip.next()).toEqual([null, "Three"]);
 	expect(zip.next()).toEqual([null, "Four"]);
-	
+	expect(zip.hasNext()).toBe(false);
+
 });
