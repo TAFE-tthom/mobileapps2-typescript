@@ -1,0 +1,9 @@
+Mos_Eisley Space The_Death_Star Trash_Compactor Yavin7
+Mos_Eisley > NORTH > Space
+Space > NORTH > The_Death_Star
+Space > WEST > Yavin7
+Space > SOUTH > Mos_Eisley
+The_Death_Star > NORTH > Trash_Compactor
+Trash_Compactor > NORTH > The_Death_Star
+The_Death_Star > SOUTH > Space
+Yavin7 > SOUTH > Space
