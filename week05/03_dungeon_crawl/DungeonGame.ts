@@ -3,7 +3,7 @@ import process from 'node:process';
 import readline from 'node:readline';
 
 
-class DungeonGame {
+export class DungeonGame {
 
   level: Dungeon;
 
@@ -31,7 +31,7 @@ class DungeonGame {
    * Starts the game with a filepath for the dungeon itself. 
    */
   static async startGame(filepath: string) {
-    const dungeon = Dungeon.loadFrom(filepath);
+    const dungeon = await Dungeon.loadFrom(filepath);
 
     if(dungeon) {
       // Go into the game
@@ -52,16 +52,21 @@ class DungeonGame {
   
 }
 
-
-// Start of the game
 if(process.argv.length >= 2) {
-  // Starts the game, will accept a string which will load
-  // 
-  DungeonGame.startGame(process.argv[2])
-    .finally(console.log);
-} else {
-  // Response when an error has occurred.
-  console.error("Unable to load the dungeon game");
+  const scriptName = process.argv[1];
+  const levelFile = process.argv[2];
+    // Start of the game
+  if(scriptName?.includes("DungeonGame")) {
+    if(levelFile) {
+      // Starts the game, will accept a string which will load
+      // 
+      DungeonGame.startGame(levelFile)
+        .finally(console.log);
+    } else {
+      // Response when an error has occurred.
+      console.error("Unable to load the dungeon game");
+    }
+  }
 }
 
 

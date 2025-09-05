@@ -78,8 +78,6 @@ W       |
 
 Specific functions to know for this task:
 
-fopen, fgets, sscanf, malloc, realloc, free, memset, strcpy, strcmp
-
 Assumptions/Clarifications:
 
 * 8192 is largest number of characters in a line from the level file.
@@ -100,7 +98,7 @@ Examples:
 
 Example 1:
 ```
-./dungeon test_dungeon.dg
+node ./dungeon.js test_dungeon.dg
 
 
 START
