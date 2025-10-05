@@ -1,0 +1,16 @@
+{
+  "name": "02_generating_iterator",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "vitest"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "dependencies": {
+    "vitest": "^3.2.4"
+  }
+}
