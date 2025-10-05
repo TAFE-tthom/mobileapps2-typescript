@@ -1,0 +1,16 @@
+{
+  "name": "06_huffman",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "vitest"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "modules",
+  "dependencies": {
+    "vitest": "^3.2.4"
+  }
+}
