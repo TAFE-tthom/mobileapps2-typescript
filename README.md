@@ -54,7 +54,7 @@ Similarly with a mathsbook, the back of the book answers normally don't outline 
 
 * *I have found a problem with the question*
 
-Great! It is impossible for myself to say that I am infallable, please create an issue within Github and outline 
+Great! It is impossible for myself to say that I am infallable, please create an issue within Github and outline the details.
 
 
 * *Why are you using `require` instead of `import`*
